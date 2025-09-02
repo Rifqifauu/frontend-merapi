@@ -45,6 +45,57 @@
         </div>
       </div>
     </section>
+    <!-- Merapi Status Section -->
+<section class="py-8">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-white rounded-xl shadow border border-gray-200 p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      
+      <!-- Left Content -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900">Merapi Jogja Dashboard</h2>
+        <p class="text-gray-700 mt-1">
+          Letusan terakhir: <span class="font-semibold">150 hari yang lalu</span>
+        </p>
+      </div>
+
+      <!-- Right Content -->
+      <div class="flex flex-col items-start md:items-end">
+        <span class="text-gray-700 font-medium">Status Merapi :</span>
+        <span class="text-green-600 font-bold flex items-center gap-2">
+          <i class="fas fa-lightbulb"></i> Normal
+        </span>
+      </div>
+    </div>
+
+    <!-- Weather Forecast -->
+    <div class="bg-gray-50 rounded-xl shadow border border-gray-200 p-6 mt-6">
+      <h3 class="text-lg font-bold text-gray-900 mb-4">Prakiraan cuaca Sekitar Merapi</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="bg-white rounded-xl shadow p-4 text-center border">
+          <h4 class="font-semibold text-gray-800 mb-2">Hari Ini</h4>
+          <p class="text-gray-500">-</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-4 text-center border">
+          <h4 class="font-semibold text-gray-800 mb-2">Besok</h4>
+          <p class="text-gray-500">-</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-4 text-center border">
+          <h4 class="font-semibold text-gray-800 mb-2">Besok Lusa</h4>
+          <p class="text-gray-500">-</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link -->
+    <div class="mt-6">
+      <a href="https://play.google.com/store/apps/details?id=com.bencana.sleman&pcampaignid=web_share" target="_blank" class="flex items-center gap-2 text-green-600 font-semibold hover:underline">
+        <i class="fab fa-google-play text-xl"></i>
+        Lihat di Aplikasi Mobile Simantab
+      </a>
+    </div>
+  </div>
+</section>
+
 
     <!-- Main Content with Sidebar -->
     <section class="py-20 bg-gray-50">
