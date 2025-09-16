@@ -6,12 +6,12 @@
         <!-- Brand Section -->
         <div class="lg:col-span-1">
           <div class="flex items-center space-x-3 mb-6">
-            <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
-              <font-awesome-icon :icon="['fas', 'mountain']" class="text-white text-xl" />
+            <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center overflow-hidden">
+              <img src="https://asosiasijeepmerapi.com/storage/logo.jpeg" alt="Logo Asosiasi Jeep Wisata" class="w-full h-full object-cover">
             </div>
             <div>
-              <h3 class="text-xl font-bold text-white">Jeep Merapi</h3>
-              <p class="text-sm text-gray-400 -mt-1">Asosiasi Tour</p>
+              <h3 class="text-xl font-bold text-white">Asosiasi Jeep Wisata</h3>
+              <p class="text-sm text-gray-400 -mt-1">Lereng Merapi</p>
             </div>
           </div>
           <p class="text-gray-400 leading-relaxed mb-6">
@@ -45,9 +45,6 @@
               </NuxtLink>
             </li>
             <li>
-              
-            </li>
-            <li>
               <NuxtLink to="/about" class="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2">
                 <font-awesome-icon :icon="['fas', 'info-circle']" class="text-xs w-3" />
                 Tentang Kami
@@ -68,8 +65,7 @@
               <div>
                 <p class="text-white font-medium mb-1">Alamat</p>
                 <p class="text-gray-400 text-sm leading-relaxed">
-                  Jl. Kaliurang KM 25, Hargobinangun<br>
-                  Pakem, Sleman, Yogyakarta 55582
+                  Banteng RT 002 RW 007, Hargobinangun, Pakem, Sleman
                 </p>
               </div>
             </div>
@@ -78,8 +74,8 @@
               <font-awesome-icon :icon="['fas', 'phone']" class="text-blue-500 mt-1" />
               <div>
                 <p class="text-white font-medium mb-1">Telepon</p>
-                <a href="tel:+62274123456" class="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  +62 274 123 456
+                <a href="tel:+6281915561964" class="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  +6281915561964
                 </a>
               </div>
             </div>
@@ -88,10 +84,29 @@
               <font-awesome-icon :icon="['fas', 'envelope']" class="text-blue-500 mt-1" />
               <div>
                 <p class="text-white font-medium mb-1">Email</p>
-                <a href="mailto:info@asosiasijeepmerapi.com" class="text-gray-400 hover:text-blue-400 transition-colors text-sm">
-                  info@asosiasijeepmerapi.com
+                <a href="mailto:daldirijogja900@gmail.com" class="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                  daldirijogja900@gmail.com
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partner Logos Section -->
+        <div>
+       
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white p-3 rounded-lg hover:scale-105 transition-transform duration-200">
+              <img src="https://asosiasijeepmerapi.com/storage/diktisaintek.png" alt="Dikti Saintek" class="w-full h-12 object-contain">
+            </div>
+            <div class="bg-white p-3 rounded-lg hover:scale-105 transition-transform duration-200">
+              <img src="https://asosiasijeepmerapi.com/storage/umy.png" alt="UMY" class="w-full h-12 object-contain">
+            </div>
+            <div class="bg-white p-3 rounded-lg hover:scale-105 transition-transform duration-200">
+              <img src="https://asosiasijeepmerapi.com/storage/bpbd.png" alt="BPBD" class="w-full h-12 object-contain">
+            </div>
+            <div class="bg-white p-3 rounded-lg hover:scale-105 transition-transform duration-200">
+              <img src="https://asosiasijeepmerapi.com/storage/tut-wuri.png" alt="Tut Wuri Handayani" class="w-full h-12 object-contain">
             </div>
           </div>
         </div>
@@ -104,17 +119,14 @@
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <div class="text-center md:text-left">
             <p class="text-gray-400 text-sm">
-              © 2025 <span class="text-white font-medium">Asosiasi Jeep Tour Merapi</span>. All rights reserved.
-            </p>
-            <p class="text-gray-500 text-xs mt-1">
-              Dibuat dengan ❤️ untuk komunitas Jeep Tour Indonesia
+              © 2025 <span class="text-white font-medium">Asosiasi Jeep Wisata Lereng Merapi</span>. All rights reserved.
             </p>
           </div>
           
           <div class="flex items-center space-x-6 text-sm">
-            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Privacy Policy</a>
+            <!-- <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Privacy Policy</a>
             <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Terms of Service</a>
-            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Sitemap</a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Sitemap</a> -->
           </div>
         </div>
       </div>
@@ -137,7 +149,8 @@ import {
   faAddressBook,
   faMapMarkerAlt,
   faPhone,
-  faEnvelope
+  faEnvelope,
+  faHandshake
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -151,6 +164,7 @@ library.add(
   faAddressBook,
   faMapMarkerAlt,
   faPhone,
-  faEnvelope
+  faEnvelope,
+  faHandshake
 )
 </script>

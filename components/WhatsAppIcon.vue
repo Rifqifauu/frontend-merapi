@@ -2,7 +2,7 @@
 <a 
       v-if="$route.name !== 'forum'"
 
-  href="https://wa.me/6285156264802?text=Halo%20Admin%2C%20saya%20ingin%20bertanya." 
+  href="https://wa.me/6281915561964?text=Halo%20Admin%2C%20saya%20ingin%20bertanya." 
   target="_blank" 
   rel="noopener" 
   aria-label="Chat via WhatsApp"

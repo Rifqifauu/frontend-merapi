@@ -2,7 +2,7 @@
   <div class="p-4 md:p-6 max-w-6xl mx-auto">
     <h1 class="text-2xl font-bold mb-6 text-center md:text-left">Manajemen Komunitas</h1>
 
-    <!-- Form Tambah/Edit -->
+    <!-- Form Tambah/Edit Komunitas -->
     <form
       @submit.prevent="submitForm"
       class="space-y-4 bg-white shadow-md rounded-xl p-4 md:p-6 mb-10"
@@ -22,12 +22,12 @@
           <input
             v-else-if="field.type === 'file'"
             type="file"
-            @change="handleFileUpload"
+            @change="handleLogoUpload"
             accept="image/*"
             class="w-full"
           />
           <div v-if="field.name === 'logo' && preview" class="mt-2">
-            <img :src="preview" alt="Preview" class="h-20 rounded shadow object-contain" />
+            <img :src="preview" alt="Preview Logo" class="h-20 rounded shadow object-contain" />
           </div>
         </div>
       </div>
@@ -50,88 +50,57 @@
       </div>
     </form>
 
-    <!-- Tabel Daftar Komunitas -->
+    <!-- Daftar Komunitas -->
     <div class="bg-white shadow-md rounded-xl p-4 md:p-6">
       <h2 class="text-xl font-semibold mb-4">Daftar Komunitas</h2>
 
-      <!-- Mobile Card View -->
-      <div class="space-y-4 md:hidden">
-        <div
-          v-for="item in communities"
-          :key="item.id"
-          class="border rounded-lg p-4 shadow-sm"
-        >
-          <div class="flex items-center gap-3 mb-3">
-            <img
-              v-if="item.logo"
-              :src="`https://asosiasijeepmerapi.com/storage/${item.logo}`"
-              class="h-12 w-12 object-cover rounded-full"
-            />
-            <div>
-              <p class="font-semibold">{{ item.name }}</p>
-            </div>
-          </div>
-          <div class="flex gap-2 mt-3">
+      <div v-for="item in communities" :key="item.id" class="border rounded p-3 mb-4">
+        <p class="font-semibold">{{ item.name }}</p>
+
+        <!-- Logo -->
+        <img v-if="item.logo" :src="`https://asosiasijeepmerapi.com/storage/${item.logo}`" class="h-12 w-12 rounded-full mb-2" />
+
+        <!-- Daftar Foto Komunitas -->
+        <div class="flex gap-2 flex-wrap mb-2">
+          <div v-for="f in item.foto" :key="f.id" class="relative">
+            <img :src="`https://asosiasijeepmerapi.com/storage/${f.path}`" class="h-20 rounded shadow" />
             <button
-              @click="editCommunity(item)"
-              class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600 flex-1"
-            >
-              Edit
-            </button>
-            <button
-              @click="deleteCommunity(item.id)"
-              class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 flex-1"
-            >
-              Hapus
-            </button>
+              @click="deletePhoto(f.id)"
+              class="absolute top-0 right-0 bg-red-600 text-white text-xs px-1 rounded"
+            >X</button>
           </div>
         </div>
-        <p v-if="communities.length === 0" class="text-center text-gray-500">Belum ada data</p>
+
+        <!-- Add Photo -->
+        <div class="flex items-center gap-2 mb-2">
+<input
+  type="file"
+  accept="image/*"
+  @change="handlePhotoFile"
+  class="border rounded px-3 py-2 cursor-pointer hover:bg-gray-100"
+/>
+          <button @click="uploadPhoto(item.id)" class="bg-blue-600 text-white px-3 py-1 rounded">Tambah Photo</button>
+          <img v-if="photoPreview" :src="photoPreview" class="h-20 rounded shadow object-contain" />
+        </div>
+
+        <!-- Tombol Edit/Hapus Community -->
+        <div class="flex gap-2 mt-2">
+          <button
+            @click="editCommunity(item)"
+            class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600 flex-1"
+          >
+            Edit
+          </button>
+          <button
+            @click="deleteCommunity(item.id)"
+            class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 flex-1"
+          >
+            Hapus
+          </button>
+        </div>
       </div>
 
-      <!-- Desktop Table View -->
-      <div class="hidden md:block overflow-x-auto">
-        <table class="w-full border-collapse min-w-[600px]">
-          <thead>
-            <tr class="bg-gray-100 text-left">
-              <th class="border px-3 py-2">Logo</th>
-              <th class="border px-3 py-2">Nama</th>
-  
-              <th class="border px-3 py-2">Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="item in communities" :key="item.id">
-              <td class="border px-3 py-2">
-                <img
-                  v-if="item.logo"
-                  :src="`https://asosiasijeepmerapi.com/storage/${item.logo}`"
-                  class="h-12 w-12 object-cover rounded-full"
-                />
-              </td>
-              <td class="border px-3 py-2">{{ item.name }}</td>
-
-              <td class="border px-3 py-2 space-x-2">
-                <button
-                  @click="editCommunity(item)"
-                  class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600"
-                >
-                  Edit
-                </button>
-                <button
-                  @click="deleteCommunity(item.id)"
-                  class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700"
-                >
-                  Hapus
-                </button>
-              </td>
-            </tr>
-            <tr v-if="communities.length === 0">
-              <td colspan="5" class="text-center text-gray-500 py-4">Belum ada data</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <p v-if="communities.length === 0" class="text-center text-gray-500">Belum ada data</p>
     </div>
   </div>
 </template>
@@ -145,6 +114,7 @@ definePageMeta({ layout: 'dashboard', ssr: false });
 const API_URL = "https://api.asosiasijeepmerapi.com/api/communities";
 const TOKEN = localStorage.getItem("token");
 
+// State
 const communities = ref([]);
 const isEditing = ref(false);
 const preview = ref(null);
@@ -158,6 +128,8 @@ const form = ref({
   facebook: "",
   logo: null,
 });
+const photoFile = ref(null);
+const photoPreview = ref(null);
 
 // Fields untuk form
 const fields = [
@@ -170,7 +142,7 @@ const fields = [
   { name: 'logo', label: 'Logo', type: 'file' },
 ];
 
-// Fetch data communities
+// Fetch communities
 const fetchCommunities = async () => {
   try {
     const res = await axios.get(API_URL, {
@@ -182,13 +154,13 @@ const fetchCommunities = async () => {
   }
 };
 
-// Handle file preview
-const handleFileUpload = (e) => {
+// Logo upload preview
+const handleLogoUpload = (e) => {
   form.value.logo = e.target.files[0];
   preview.value = URL.createObjectURL(e.target.files[0]);
 };
 
-// Simpan / update data
+// Submit community
 const submitForm = async () => {
   const formData = new FormData();
   Object.keys(form.value).forEach((key) => {
@@ -212,7 +184,7 @@ const submitForm = async () => {
   }
 };
 
-// Edit
+// Edit community
 const editCommunity = (item) => {
   form.value = { ...item, logo: null };
   preview.value = item.logo ? `https://asosiasijeepmerapi.com/storage/${item.logo}` : null;
@@ -235,7 +207,7 @@ const resetForm = () => {
   isEditing.value = false;
 };
 
-// Delete
+// Delete community
 const deleteCommunity = async (id) => {
   if (!confirm("Yakin ingin menghapus?")) return;
   try {
@@ -245,6 +217,45 @@ const deleteCommunity = async (id) => {
     fetchCommunities();
   } catch (err) {
     console.error(err);
+  }
+};
+
+// Photo upload handlers
+const handlePhotoFile = (e) => {
+  photoFile.value = e.target.files[0];
+  photoPreview.value = URL.createObjectURL(photoFile.value);
+};
+
+const uploadPhoto = async (communityId) => {
+  if (!photoFile.value) return alert("Pilih foto dulu!");
+  
+  const formData = new FormData();
+  formData.append('foto', photoFile.value);
+
+  try {
+    await axios.post(`${API_URL}/${communityId}/foto`, formData, {
+      headers: { Authorization: `Bearer ${TOKEN}`, "Content-Type": "multipart/form-data" }
+    });
+    photoFile.value = null;
+    photoPreview.value = null;
+    fetchCommunities();
+  } catch (err) {
+    console.error(err);
+    alert("Gagal upload foto");
+  }
+};
+
+const deletePhoto = async (photoId) => {
+  if (!confirm("Yakin ingin menghapus foto ini?")) return;
+
+  try {
+    await axios.delete(`${API_URL}/foto/${photoId}`, {
+      headers: { Authorization: `Bearer ${TOKEN}` }
+    });
+    fetchCommunities();
+  } catch (err) {
+    console.error(err);
+    alert("Gagal hapus foto");
   }
 };
 

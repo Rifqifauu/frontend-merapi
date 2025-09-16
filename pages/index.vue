@@ -14,7 +14,7 @@
   <div class="relative max-w-7xl mx-auto px-6 py-24 lg:py-32">
     <div class="max-w-3xl">
       <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-        Asosiasi Jeep Tour Merapi
+        Asosiasi Jeep Wisata Lereng Merapi
       </h1>
       <p class="text-xl lg:text-2xl mb-8 text-blue-100 font-light leading-relaxed">
         Pengalaman petualangan profesional menjelajahi keindahan Gunung Merapi dengan standar keselamatan terpercaya
@@ -45,56 +45,62 @@
         </div>
       </div>
     </section>
-    <!-- Merapi Status Section -->
-<section class="py-8">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="bg-white rounded-xl shadow border border-gray-200 p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-      
-      <!-- Left Content -->
-      <div>
-        <h2 class="text-2xl font-bold text-gray-900">Merapi Jogja Dashboard</h2>
-        <p class="text-gray-700 mt-1">
-          Letusan terakhir: <span class="font-semibold">150 hari yang lalu</span>
-        </p>
-      </div>
+<!-- Merapi Status Section -->
+<section class="py-5">
+  <div class="max-w-7xl mx-auto px-6 space-y-8">
+    
+  
+    <!-- SIMANTAB -->
+    <section class="border border-gray-200 rounded-2xl bg-white p-6 shadow-md" lang="id" aria-labelledby="ajm-simantab-title">
+      <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="mb-6">
+          <h2 id="ajm-simantab-title" class="text-2xl font-bold text-slate-900">
+            SIMANTAB — Sistem Informasi Sleman Tangguh Bencana
+          </h2>
+          <p class="text-slate-600 text-base mt-1">
+            Aplikasi resmi BPBD Sleman untuk informasi kebencanaan dan pelaporan cepat di kawasan Merapi.
+          </p>
+        </header>
 
-      <!-- Right Content -->
-      <div class="flex flex-col items-start md:items-end">
-        <span class="text-gray-700 font-medium">Status Merapi :</span>
-        <span class="text-green-600 font-bold flex items-center gap-2">
-          <i class="fas fa-lightbulb"></i> Normal
-        </span>
-      </div>
-    </div>
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Mengapa Penting bagi Wisata Merapi?</h3>
+            <ul class="list-disc list-inside space-y-2 text-slate-700">
+              <li><strong>Kesiapsiagaan tur</strong> — memantau situasi Gunung Merapi sebelum keberangkatan.</li>
+              <li><strong>Keamanan rute</strong> — panduan lokasi aman & titik evakuasi untuk kru dan tamu.</li>
+              <li><strong>Pelaporan cepat</strong> — kanal resmi untuk melaporkan kejadian di lapangan.</li>
+            </ul>
+          </div>
 
-    <!-- Weather Forecast -->
-    <div class="bg-gray-50 rounded-xl shadow border border-gray-200 p-6 mt-6">
-      <h3 class="text-lg font-bold text-gray-900 mb-4">Prakiraan cuaca Sekitar Merapi</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div class="bg-white rounded-xl shadow p-4 text-center border">
-          <h4 class="font-semibold text-gray-800 mb-2">Hari Ini</h4>
-          <p class="text-gray-500">-</p>
+          <div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Fitur Utama</h3>
+            <ul class="list-disc list-inside space-y-2 text-slate-700">
+              <li><strong>Lapor Kak Kodar</strong> — laporkan darurat (angin kencang, pohon tumbang, dll.).</li>
+              <li><strong>Merapi Live</strong> — pantau kondisi melalui CCTV & informasi status.</li>
+              <li><strong>Paman Lepi</strong> — panduan posisi aman lereng Merapi.</li>
+              <li><strong>Dewi Lepi</strong> — referensi destinasi wisata lereng Merapi.</li>
+              <li><strong>Pandu Timan</strong> — rute menuju titik evakuasi.</li>
+              <li><strong>SILOLA</strong> — informasi logistik & peralatan kebencanaan (stok, gudang, distribusi).</li>
+            </ul>
+          </div>
         </div>
-        <div class="bg-white rounded-xl shadow p-4 text-center border">
-          <h4 class="font-semibold text-gray-800 mb-2">Besok</h4>
-          <p class="text-gray-500">-</p>
-        </div>
-        <div class="bg-white rounded-xl shadow p-4 text-center border">
-          <h4 class="font-semibold text-gray-800 mb-2">Besok Lusa</h4>
-          <p class="text-gray-500">-</p>
+
+        <!-- CTA -->
+        <div class="flex flex-wrap items-center gap-4 mt-8">
+          <a href="https://play.google.com/store/apps/details?id=com.bencana.sleman" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 rounded-lg font-semibold bg-green-600 text-white hover:bg-green-700 active:translate-y-px transition">
+            <i class="fab fa-google-play text-lg"></i> Lihat di Google Play
+          </a>
+          <span class="text-slate-500 text-sm">Privasi: aplikasi tidak mengumpulkan data pengguna.</span>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Link -->
-    <div class="mt-6">
-      <a href="https://play.google.com/store/apps/details?id=com.bencana.sleman&pcampaignid=web_share" target="_blank" class="flex items-center gap-2 text-green-600 font-semibold hover:underline">
-        <i class="fab fa-google-play text-xl"></i>
-        Lihat di Aplikasi Mobile Simantab
-      </a>
-    </div>
   </div>
 </section>
+
 
 
     <!-- Main Content with Sidebar -->
@@ -232,15 +238,15 @@
               <div class="space-y-4">
                 <div class="flex items-center gap-3">
                   <i class="fas fa-phone text-blue-600"></i>
-                  <span class="text-gray-700">+62 274 123456</span>
+                  <span class="text-gray-700">+6281915561964</span>
                 </div>
                 <div class="flex items-center gap-3">
                   <i class="fas fa-envelope text-blue-600"></i>
-                  <span class="text-gray-700">info@jeepmerapi.com</span>
+                  <span class="text-gray-700">daldirijogja900@gmail.com</span>
                 </div>
                 <div class="flex items-center gap-3">
                   <i class="fas fa-map-marker-alt text-blue-600"></i>
-                  <span class="text-gray-700">Kaliurang, Yogyakarta</span>
+                  <span class="text-gray-700">Banteng RT 002 RW 007, Hargobinangun, Pakem, Sleman</span>
                 </div>
               </div>
             </div>
@@ -256,7 +262,7 @@
       <div class="relative max-w-4xl mx-auto px-6 text-center">
         <h2 class="text-3xl lg:text-5xl font-bold mb-6">Siap Menjelajahi Merapi Bersama Kami?</h2>
         <p class="text-xl mb-8 text-blue-100 leading-relaxed max-w-2xl mx-auto">
-          Bergabunglah dengan Asosiasi Jeep Tour Merapi dan dapatkan pengalaman petualangan yang tak terlupakan.
+          Bergabunglah dengan Asosiasi Jeep Wisata Lereng Merapi dan dapatkan pengalaman petualangan yang tak terlupakan.
         </p>
  
       </div>
@@ -278,7 +284,7 @@ import axios from 'axios'
 useHead({
   title: 'Beranda',
   meta: [
-    { name: 'description', content: 'Ini adalah halaman Beranda dari Website Asosiasi Jeep Merapi' }
+    { name: 'description', content: 'Ini adalah halaman Beranda dari Website Asosiasi Jeep Wisata Lereng Merapi' }
   ]
 })
 const kegiatan = ref([])

@@ -5,11 +5,10 @@
       <!-- Logo -->
       <div class="flex items-center space-x-3 pr-4">
         <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-          <font-awesome-icon :icon="['fas', 'mountain']" class="text-white text-lg" />
-        </div>
+<img src="https://asosiasijeepmerapi.com/storage/logo.jpeg" alt="">        </div>
         <div>
-          <h1 class="text-lg font-bold text-gray-900">Asosiasi Jeep</h1>
-          <p class="text-xs text-gray-500 -mt-1"> Tour Merapi</p>
+          <h1 class="text-lg font-bold text-gray-900">Asosiasi Jeep Wisata</h1>
+          <p class="text-xs text-gray-500 -mt-1"> Lereng Merapi</p>
         </div>
       </div>
 

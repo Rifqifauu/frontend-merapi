@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <section class="relative bg-blue-900 text-white py-20">
       <div class="container mx-auto px-6 text-center max-w-3xl">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6">Asosiasi Jeep Merapi</h1>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Asosiasi Jeep Wisata Lereng Merapi</h1>
         <p class="text-lg md:text-xl leading-relaxed">
           Komunitas pecinta Jeep yang menjelajahi Merapi dengan aman, bertanggung jawab, dan penuh kebersamaan.
         </p>
