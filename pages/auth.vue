@@ -72,7 +72,6 @@ useHead({
 const router = useRouter()
 const baseUrl = 'https://api.asosiasijeepmerapi.com/api'
 
-// ✅ Destructure dengan benar untuk mendapatkan setAuth
 const { auth, setAuth } = useAuth()
 
 // toggle state

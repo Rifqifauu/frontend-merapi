@@ -11,7 +11,6 @@
       <div
         v-for="community in paginatedCommunities"
         :key="community.id"
-        @click="openModal(community)"
         class="cursor-pointer rounded-2xl border bg-white shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300 p-6 flex flex-col items-center"
       >
         <!-- Logo -->
@@ -21,6 +20,8 @@
             :src="`https://asosiasijeepmerapi.com/storage/${community.logo}`"
             class="max-w-full max-h-full object-contain rounded-xl"
             :alt="`Logo ${community.name}`"
+                    @click="openModal(community)"
+
           />
         </div>
 
